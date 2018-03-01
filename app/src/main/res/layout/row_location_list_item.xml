@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal"
+            android:weightSum="3.5">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    tools:text="Place" />
+
+                <TextView
+                    android:id="@+id/tv_sublocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                    tools:text="Place" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iconImageView"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/partly_cloudy"
+                    android:tint="@android:color/darker_gray" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/temperatureLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+                        tools:text="100" />
+
+                    <ImageView
+                        android:id="@+id/degreeImageView"
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-5dp"
+                        android:contentDescription="@string/degree_description"
+                        android:src="@drawable/degree"
+                        android:tint="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/tempVariation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="-10dp"
+                        android:text="@string/celsius"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+
+                        android:typeface="normal" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tv_humidity_rain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                tools:text="Humidity 23 | Rain?Sown 3%" />
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right|bottom"
+                android:layout_weight="0.5"
+                android:src="@android:drawable/ic_menu_delete" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp">
+
+    <FrameLayout
+        android:id="@+id/widget_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:background="@drawable/widget_layout" />
+
+    <FrameLayout
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="end|top">
+
+        <ImageView
+            android:id="@+id/widget_button_update"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:clickable="true"
+            android:contentDescription="@string/image_description"
+            android:scaleType="centerInside"
+            android:src="@drawable/refresh" />
+
+        <ProgressBar
+            android:id="@+id/widget_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:padding="6dp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/widget_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/partly_cloudy" />
+
+            <TextView
+                android:id="@+id/widget_high_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/widget_icon"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@+id/widget_icon"
+                android:layout_toRightOf="@+id/widget_icon"
+                android:fontFamily="sans-serif-light"
+                android:gravity="end"
+                android:paddingLeft="8dp"
+                android:paddingStart="8dp"
+                android:textColor="@color/colorLight"
+                android:textSize="36sp"
+                tools:ignore="RtlSymmetry"
+                tools:text="7°C" />
+
+            <TextView
+                android:id="@+id/widget_wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/widget_icon"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-condensed"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorLight"
+                tools:text="Wind 12 m/s, NW" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/widget_city_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorLight"
+                tools:ignore="RelativeOverlap"
+                tools:text="Location" />
+
+            <TextView
+                android:id="@+id/widget_weather_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorLight"
+                tools:ignore="RelativeOverlap"
+                tools:text="Date Time" />
+
+            <TextView
+                android:id="@+id/widget_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center_horizontal"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/colorLight"
+                tools:text="Clear " />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

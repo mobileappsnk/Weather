@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_timedate_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/primary_text_margin"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iconImageView"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/partly_cloudy"
+                    android:tint="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/timeLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                        tools:text="Today" />
+
+                    <TextView
+                        android:id="@+id/summaryLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                        tools:text="Partly Cloudy" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/temperatureLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+                        tools:text="100" />
+
+                    <ImageView
+                        android:id="@+id/degreeImageView"
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-5dp"
+                        android:contentDescription="@string/degree_description"
+                        android:src="@drawable/degree"
+                        android:tint="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/tempVariation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="-10dp"
+                        android:text="@string/celsius"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+
+                        android:typeface="normal" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
