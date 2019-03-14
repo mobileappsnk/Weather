@@ -12,5 +12,6 @@ You can search 7 day weather forecast with daily average parameters.
 
 App Rating Popup Alert
 
-Play Store Link:
+#Play Store Link:
 https://play.google.com/store/apps/details?id=nk.mobileapps.weather
+
