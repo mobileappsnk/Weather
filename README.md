@@ -15,6 +15,6 @@ App Rating Popup Alert
 #Play Store Link:
 https://play.google.com/store/apps/details?id=nk.mobileapps.weather
 
-<img src="https://github.com/mobileappsnk/Weather/blob/master/Screenshot_1519801930.png"> 
+<img src="https://github.com/mobileappsnk/Weather/blob/master/Screenshot_1519801930.png" width="500" height="600"> 
 
 
